@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AuthView: View {
     
+    @State private var isAuth = true
     @State private var email = ""
     @State private var password = ""
+    @State private var confirmPassword = ""
+    @State private var isTabViewShow = false
     
     var body: some View {
         VStack(spacing: 30){
-            Text("Авторизация")
+            Text(isAuth ? "Авторизация" : "Регистрация")
                 .padding()
                 .foregroundColor(.white)
                 .padding(.horizontal, 40)
@@ -43,10 +46,29 @@ struct ContentView: View {
                     .padding(8)
                     .padding(.horizontal, 12)
                 
+                if !isAuth {
+                    SecureField("Повторите пароль", text: $confirmPassword)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
+                        .foregroundColor(.black)
+                        .cornerRadius(12)
+                        .padding(8)
+                        .padding(.horizontal, 12)
+                }
+                
                 Button {
-                    // do smth
+                    if isAuth {
+                        print("Авторизация")
+                        isTabViewShow.toggle()
+                    } else {
+                        print("Регистрация")
+                        self.email = ""
+                        self.password = ""
+                        self.confirmPassword = ""
+                        self.isAuth.toggle()
+                    }
                 } label: {
-                    Text("Войти")
+                    Text(isAuth ? "Войти" : "Создать")
                         .padding()
                         .frame(maxWidth: .infinity)
                         .foregroundColor(.white)
@@ -61,9 +83,9 @@ struct ContentView: View {
                 }
                 
                 Button {
-                    // do wmth
+                    isAuth.toggle()
                 } label: {
-                    Text("Создать аккаунт")
+                    Text(isAuth ? "Создать аккаунт" : "Уже есть аккаунт?")
                         .padding(.horizontal)
                         .foregroundColor(.white)
                         .padding(8)
@@ -84,13 +106,17 @@ struct ContentView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Image("mainBackground").resizable().ignoresSafeArea().frame(width: 580, height: 815))
-        
+        .background(Image("mainBackground").resizable().ignoresSafeArea().frame(width: 580, height: 815).blur(radius: isAuth ? 0 : 3))
+        .animation(Animation.easeInOut(duration: 0.5), value: isAuth)
+        .fullScreenCover(isPresented: $isTabViewShow) {
+            MainTabBarView()
+        }
     }
+        
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AuthView()
     }
 }

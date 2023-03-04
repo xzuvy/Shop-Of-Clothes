@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		565621FE29B240DE00437540 /* xzuvyShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565621FD29B240DE00437540 /* xzuvyShopApp.swift */; };
-		5656220029B240DE00437540 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565621FF29B240DE00437540 /* ContentView.swift */; };
+		5656220029B240DE00437540 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565621FF29B240DE00437540 /* AuthView.swift */; };
 		5656220229B240E000437540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5656220129B240E000437540 /* Assets.xcassets */; };
 		5656220529B240E000437540 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5656220429B240E000437540 /* Preview Assets.xcassets */; };
+		56A7C16029B3EEAA00C06129 /* MainTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C15F29B3EEAA00C06129 /* MainTabBarView.swift */; };
+		56A7C16229B3F20F00C06129 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C16129B3F20F00C06129 /* CatalogView.swift */; };
+		56A7C16429B3F26F00C06129 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C16329B3F26F00C06129 /* CartView.swift */; };
+		56A7C16629B3F29700C06129 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C16529B3F29700C06129 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		565621FA29B240DE00437540 /* xzuvyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xzuvyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565621FD29B240DE00437540 /* xzuvyShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xzuvyShopApp.swift; sourceTree = "<group>"; };
-		565621FF29B240DE00437540 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		565621FF29B240DE00437540 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		5656220129B240E000437540 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5656220429B240E000437540 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		56A7C15F29B3EEAA00C06129 /* MainTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarView.swift; sourceTree = "<group>"; };
+		56A7C16129B3F20F00C06129 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		56A7C16329B3F26F00C06129 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		56A7C16529B3F29700C06129 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +60,13 @@
 			isa = PBXGroup;
 			children = (
 				565621FD29B240DE00437540 /* xzuvyShopApp.swift */,
-				565621FF29B240DE00437540 /* ContentView.swift */,
+				565621FF29B240DE00437540 /* AuthView.swift */,
+				56A7C15F29B3EEAA00C06129 /* MainTabBarView.swift */,
+				56A7C16129B3F20F00C06129 /* CatalogView.swift */,
 				5656220129B240E000437540 /* Assets.xcassets */,
 				5656220329B240E000437540 /* Preview Content */,
+				56A7C16329B3F26F00C06129 /* CartView.swift */,
+				56A7C16529B3F29700C06129 /* ProfileView.swift */,
 			);
 			path = xzuvyShop;
 			sourceTree = "<group>";
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5656220029B240DE00437540 /* ContentView.swift in Sources */,
+				56A7C16429B3F26F00C06129 /* CartView.swift in Sources */,
+				56A7C16029B3EEAA00C06129 /* MainTabBarView.swift in Sources */,
+				5656220029B240DE00437540 /* AuthView.swift in Sources */,
+				56A7C16229B3F20F00C06129 /* CatalogView.swift in Sources */,
+				56A7C16629B3F29700C06129 /* ProfileView.swift in Sources */,
 				565621FE29B240DE00437540 /* xzuvyShopApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

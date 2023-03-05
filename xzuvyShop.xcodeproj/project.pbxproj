@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563FC2F429B4DB79009C859F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2F329B4DB79009C859F /* Product.swift */; };
+		563FC2F629B4DCDE009C859F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2F529B4DCDE009C859F /* ProductCell.swift */; };
+		563FC2FA29B4E682009C859F /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2F929B4E682009C859F /* CatalogViewModel.swift */; };
+		563FC2FD29B4ED5A009C859F /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2FC29B4ED5A009C859F /* ProductDetailView.swift */; };
+		563FC2FF29B50A11009C859F /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2FE29B50A11009C859F /* ProductDetailViewModel.swift */; };
+		563FC30129B5299B009C859F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC30029B5299B009C859F /* CartViewModel.swift */; };
+		563FC30529B529DC009C859F /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC30429B529DC009C859F /* Position.swift */; };
 		565621FE29B240DE00437540 /* xzuvyShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565621FD29B240DE00437540 /* xzuvyShopApp.swift */; };
 		5656220029B240DE00437540 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565621FF29B240DE00437540 /* AuthView.swift */; };
 		5656220229B240E000437540 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5656220129B240E000437540 /* Assets.xcassets */; };
@@ -18,6 +25,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		563FC2F329B4DB79009C859F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		563FC2F529B4DCDE009C859F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		563FC2F929B4E682009C859F /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
+		563FC2FC29B4ED5A009C859F /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		563FC2FE29B50A11009C859F /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		563FC30029B5299B009C859F /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		563FC30429B529DC009C859F /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		565621FA29B240DE00437540 /* xzuvyShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xzuvyShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		565621FD29B240DE00437540 /* xzuvyShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xzuvyShopApp.swift; sourceTree = "<group>"; };
 		565621FF29B240DE00437540 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -40,6 +54,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		563FC2F229B4DB60009C859F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				565621FF29B240DE00437540 /* AuthView.swift */,
+				56A7C15F29B3EEAA00C06129 /* MainTabBarView.swift */,
+				56A7C16129B3F20F00C06129 /* CatalogView.swift */,
+				56A7C16329B3F26F00C06129 /* CartView.swift */,
+				56A7C16529B3F29700C06129 /* ProfileView.swift */,
+				563FC2FC29B4ED5A009C859F /* ProductDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		563FC2F729B4DCF7009C859F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				563FC2F529B4DCDE009C859F /* ProductCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		563FC2F829B4E658009C859F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				563FC2F329B4DB79009C859F /* Product.swift */,
+				563FC30429B529DC009C859F /* Position.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		563FC2FB29B4E68B009C859F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				563FC2F929B4E682009C859F /* CatalogViewModel.swift */,
+				563FC2FE29B50A11009C859F /* ProductDetailViewModel.swift */,
+				563FC30029B5299B009C859F /* CartViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		565621F129B240DE00437540 = {
 			isa = PBXGroup;
 			children = (
@@ -60,13 +114,12 @@
 			isa = PBXGroup;
 			children = (
 				565621FD29B240DE00437540 /* xzuvyShopApp.swift */,
-				565621FF29B240DE00437540 /* AuthView.swift */,
-				56A7C15F29B3EEAA00C06129 /* MainTabBarView.swift */,
-				56A7C16129B3F20F00C06129 /* CatalogView.swift */,
+				563FC2FB29B4E68B009C859F /* ViewModel */,
+				563FC2F829B4E658009C859F /* Model */,
+				563FC2F229B4DB60009C859F /* Views */,
 				5656220129B240E000437540 /* Assets.xcassets */,
+				563FC2F729B4DCF7009C859F /* Components */,
 				5656220329B240E000437540 /* Preview Content */,
-				56A7C16329B3F26F00C06129 /* CartView.swift */,
-				56A7C16529B3F29700C06129 /* ProfileView.swift */,
 			);
 			path = xzuvyShop;
 			sourceTree = "<group>";
@@ -149,12 +202,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				563FC30129B5299B009C859F /* CartViewModel.swift in Sources */,
 				56A7C16429B3F26F00C06129 /* CartView.swift in Sources */,
+				563FC2FD29B4ED5A009C859F /* ProductDetailView.swift in Sources */,
 				56A7C16029B3EEAA00C06129 /* MainTabBarView.swift in Sources */,
 				5656220029B240DE00437540 /* AuthView.swift in Sources */,
 				56A7C16229B3F20F00C06129 /* CatalogView.swift in Sources */,
+				563FC2FF29B50A11009C859F /* ProductDetailViewModel.swift in Sources */,
+				563FC30529B529DC009C859F /* Position.swift in Sources */,
 				56A7C16629B3F29700C06129 /* ProfileView.swift in Sources */,
+				563FC2F629B4DCDE009C859F /* ProductCell.swift in Sources */,
 				565621FE29B240DE00437540 /* xzuvyShopApp.swift in Sources */,
+				563FC2F429B4DB79009C859F /* Product.swift in Sources */,
+				563FC2FA29B4E682009C859F /* CatalogViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

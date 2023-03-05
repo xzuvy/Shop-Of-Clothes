@@ -31,13 +31,13 @@ struct AuthView: View {
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
                     .foregroundColor(.black)
-                    //.background(Color("grayAlpha"))
+                //.background(Color("grayAlpha"))
                     .cornerRadius(12)
                     .padding(8)
                     .padding(.horizontal, 12)
                     .foregroundColor(Color("colorOne"))
                     .padding(.top, 4)
-
+                
                 SecureField("Введите пароль", text: $password)
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
@@ -74,12 +74,12 @@ struct AuthView: View {
                         .foregroundColor(.white)
                         .background(LinearGradient(colors: [Color("grayAlpha"), Color("blackAlpha")], startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(12)
-                        
+                    
                         .padding(.horizontal, 12)
                         .padding(.bottom)
                         .padding(.top, 5)
                         .font(.title3.bold())
-                        
+                    
                 }
                 
                 Button {
@@ -90,13 +90,13 @@ struct AuthView: View {
                         .foregroundColor(.white)
                         .padding(8)
                         .padding(.horizontal, 12)
-//                        .background(LinearGradient(colors: [Color("blackAlpha"), Color("grayAlpha")], startPoint: .leading, endPoint: .trailing))
+                    //                        .background(LinearGradient(colors: [Color("blackAlpha"), Color("grayAlpha")], startPoint: .leading, endPoint: .trailing))
                         .cornerRadius(9)
                         .font(.title3.bold())
                         .padding(.horizontal)
                 }
-
-
+                
+                
                 
             }
             .padding()
@@ -112,7 +112,7 @@ struct AuthView: View {
             MainTabBarView()
         }
     }
-        
+    
 }
 
 struct AuthView_Previews: PreviewProvider {

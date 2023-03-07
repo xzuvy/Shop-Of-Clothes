@@ -12,6 +12,7 @@ struct ProductDetailView: View {
     var viewModel: ProductDetailViewModel
     @State var size = "37"
     @State var count = 1
+    @Environment(\.presentationMode) var presentationMode
     
     
     var body: some View {
@@ -60,7 +61,9 @@ struct ProductDetailView: View {
                         }
                         VStack{
                             Button {
-                                //
+                                let position = Position(id: UUID().uuidString, product: viewModel.product, count: self.count)
+                                CartViewModel.shared.addPosition(position)
+                                presentationMode.wrappedValue.dismiss()
                             } label: {
                                 Text("Добавить в корзину")
                                     .padding()

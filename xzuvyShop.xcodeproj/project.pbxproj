@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5631A9EB29B7619600912EFE /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5631A9EA29B7619600912EFE /* PositionCell.swift */; };
 		563FC2F429B4DB79009C859F /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2F329B4DB79009C859F /* Product.swift */; };
 		563FC2F629B4DCDE009C859F /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2F529B4DCDE009C859F /* ProductCell.swift */; };
 		563FC2FA29B4E682009C859F /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563FC2F929B4E682009C859F /* CatalogViewModel.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5631A9EA29B7619600912EFE /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
 		563FC2F329B4DB79009C859F /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		563FC2F529B4DCDE009C859F /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		563FC2F929B4E682009C859F /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				563FC2F529B4DCDE009C859F /* ProductCell.swift */,
+				5631A9EA29B7619600912EFE /* PositionCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				56A7C16029B3EEAA00C06129 /* MainTabBarView.swift in Sources */,
 				5656220029B240DE00437540 /* AuthView.swift in Sources */,
 				56A7C16229B3F20F00C06129 /* CatalogView.swift in Sources */,
+				5631A9EB29B7619600912EFE /* PositionCell.swift in Sources */,
 				563FC2FF29B50A11009C859F /* ProductDetailViewModel.swift in Sources */,
 				563FC30529B529DC009C859F /* Position.swift in Sources */,
 				56A7C16629B3F29700C06129 /* ProfileView.swift in Sources */,

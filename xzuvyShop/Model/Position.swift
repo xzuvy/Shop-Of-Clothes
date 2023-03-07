@@ -7,12 +7,11 @@
 
 import Foundation
 
-struct Position {
+struct Position : Identifiable {
     
     var id : String
     var product : Product
     var count : Int
-    
     var cost : Int {
         
         return product.price * self.count

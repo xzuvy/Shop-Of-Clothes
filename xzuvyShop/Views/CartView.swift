@@ -9,15 +9,75 @@ import SwiftUI
 
 struct CartView: View {
     
-    var viewModel: CartViewModel
+    @StateObject var viewModel: CartViewModel
     
     var body: some View {
-        Text("cart")
+        
+        VStack {
+            List(viewModel.positions) { position in
+                
+                PositionCell(position: position)
+                    .swipeActions {
+                        Button {
+                            viewModel.positions.removeAll { pos in
+                                pos.id == position.id
+                            }
+                        } label: {
+                            Text("Удалить")
+                        }
+                        .tint(.red)
+
+                    }
+            }
+            .listStyle(.plain)
+        .navigationTitle("Корзина")
+            
+            HStack {
+                Text("Итого : ")
+                    .fontWeight(.bold)
+                Spacer()
+                Text("\(self.viewModel.cost) BYN")
+                    .fontWeight(.bold)
+            }
+            .padding()
+            
+            HStack(spacing: 24){
+                
+                Button {
+                    //
+                } label: {
+                    Text("Заказать")
+                        .padding()
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .background(.green)
+                        .cornerRadius(12)
+                        .padding(.bottom, 15)
+                }
+                
+                Button {
+                    //
+                } label: {
+                    Text("Отменить")
+                        .padding()
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                        .background(.red)
+                        .cornerRadius(12)
+                        .padding(.bottom, 15)
+                }
+                
+            }
+
+        }
+        
+        
+        
     }
 }
 
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        CartView(viewModel: CartViewModel())
+        CartView(viewModel: CartViewModel.shared)
     }
 }

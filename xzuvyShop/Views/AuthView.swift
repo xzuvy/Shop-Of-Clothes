@@ -14,6 +14,8 @@ struct AuthView: View {
     @State private var password = ""
     @State private var confirmPassword = ""
     @State private var isTabViewShow = false
+    @State private var isShowAlert = false
+    @State private var alertMessage = ""
     
     var body: some View {
         VStack(spacing: 30){
@@ -59,13 +61,43 @@ struct AuthView: View {
                 Button {
                     if isAuth {
                         print("Авторизация")
-                        isTabViewShow.toggle()
+                        
+                        AuthService.shared.signIn(email: self.email, password: self.password) { result in
+                            switch result {
+                            case .success(_):
+                                isTabViewShow.toggle()
+                            case .failure(let error):
+                                alertMessage = "Ошибка авторизации : \(error.localizedDescription)"
+                                isShowAlert.toggle()
+                            }
+                        }
+                        
+                       // isTabViewShow.toggle()
                     } else {
                         print("Регистрация")
-                        self.email = ""
-                        self.password = ""
-                        self.confirmPassword = ""
-                        self.isAuth.toggle()
+                        
+                        guard password == confirmPassword else {
+                            self.alertMessage = "Пароли не совпадают"
+                            self.isShowAlert.toggle()
+                            return
+                        }
+                        
+                        AuthService.shared.signUp(email: self.email, password: self.password) { result  in
+                            switch result {
+                                
+                            case .success(let user):
+                                alertMessage = "Вы зарегистрировались с email \(user.email)"
+                                self.isShowAlert.toggle()
+                                self.email = ""
+                                self.password = ""
+                                self.confirmPassword = ""
+                                self.isAuth.toggle()
+                            case .failure(let error):
+                                alertMessage = "Ошибка регистрации \(error.localizedDescription)"
+                                self.isShowAlert.toggle()
+                            }
+                        }
+
                     }
                 } label: {
                     Text(isAuth ? "Войти" : "Создать")
@@ -103,13 +135,24 @@ struct AuthView: View {
             .background(Color("blackAlpha"))
             .cornerRadius(14)
             .padding(20)
+            .alert(alertMessage, isPresented: $isShowAlert) {
+                Button {
+                    //
+                } label: {
+                    Text("Ok")
+                }
+
+            }
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Image("mainBackground").resizable().ignoresSafeArea().frame(width: 580, height: 815).blur(radius: isAuth ? 0 : 3))
         .animation(Animation.easeInOut(duration: 0.5), value: isAuth)
         .fullScreenCover(isPresented: $isTabViewShow) {
-            MainTabBarView()
+            
+            var mainTabBarViewModel = MainTabBarViewModel(user: AuthService.shared.currentUser!)
+            
+            MainTabBarView(viewModel: mainTabBarViewModel)
         }
     }
     

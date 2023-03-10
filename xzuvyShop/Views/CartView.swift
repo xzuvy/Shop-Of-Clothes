@@ -17,7 +17,7 @@ struct CartView: View {
             List(viewModel.positions) { position in
                 
                 PositionCell(position: position)
-                    .swipeActions {
+                    .swipeActions { 
                         Button {
                             viewModel.positions.removeAll { pos in
                                 pos.id == position.id
@@ -44,7 +44,19 @@ struct CartView: View {
             HStack(spacing: 24){
                 
                 Button {
-                    //
+                    var order = Order(userID: AuthService.shared.currentUser!.uid,
+                                      date: Date(),
+                                      status: OrderStatus.new.rawValue)
+                    order.positions = self.viewModel.positions
+                    
+                    DatabaseService.shared.setOred(order: order) { result in
+                        switch result {
+                        case .success(let order):
+                            print(order.cost)
+                        case .failure(let error):
+                            print(error.localizedDescription)
+                        }
+                    }
                 } label: {
                     Text("Заказать")
                         .padding()

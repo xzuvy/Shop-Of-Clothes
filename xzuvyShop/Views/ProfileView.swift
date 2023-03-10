@@ -12,7 +12,7 @@ struct ProfileView: View {
     @State var isAvaAlert = false
     @State var isQuit = false
     @State var isAuthView = false
-    
+    @StateObject var viewModel: ProfileViewModel
     var body: some View {
         
         VStack(alignment: .center, spacing: 20) {
@@ -36,29 +36,41 @@ struct ProfileView: View {
                         } label: {
                             Text("Из камеры")
                         }
-
+                        
                     }
-
+                
                 
                 VStack(alignment: .leading, spacing: 3){
-                    Text("Андрей Викторович Лахма")
-                        .bold()
-                    Text("+375338761234")
+                    TextField("Имя", text: $viewModel.profile.name)
+                        .font(.custom("AvenirNext-Bold", size: 18))
+                    
+                    HStack{
+                        Text("+375")
+                        TextField("Телефон", value: $viewModel.profile.number, format: IntegerFormatStyle.number)
+                    }
                     
                 }
+                
             }
             
             VStack(alignment: .leading){
                 Text("Адрес доставки:")
                     .bold()
                     .padding(.leading, 16)
-                Text("г.Минск, ул.Бачило 20,122")
+                TextField("Ваш адрес", text: $viewModel.profile.adress)
                     .padding(.top, 1)
                     .padding(.leading, 16)
             }
             
             List {
-                Text("vawi zakazi")
+                if viewModel.orders.count == 0 {
+                    Text("vawi zakazi")
+                } else {
+                    ForEach(viewModel.orders, id: \.id) { order in
+                        OrderCell(order: order)
+                    }
+                }
+                
             }
             .listStyle(.plain)
             
@@ -78,7 +90,7 @@ struct ProfileView: View {
                         } label: {
                             Text("Да")
                         }
-
+                        
                     }
             }
             Spacer()
@@ -87,15 +99,20 @@ struct ProfileView: View {
         .fullScreenCover(isPresented: $isAuthView, onDismiss: nil) {
             AuthView()
         }
+        .onSubmit {
+            viewModel.setProfile()
+        }
         
-        
-        
-        
+        .onAppear {
+            self.viewModel.getProfile()
+            self.viewModel.getOrder()
+        }
     }
+    
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(viewModel: ProfileViewModel(profile: UserShop(id: "" ,name: "Вася Слвал", number: 293455543, adress: "Bachilo")))
     }
 }

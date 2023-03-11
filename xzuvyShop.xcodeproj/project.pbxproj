@@ -28,6 +28,13 @@
 		56A7C16229B3F20F00C06129 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C16129B3F20F00C06129 /* CatalogView.swift */; };
 		56A7C16429B3F26F00C06129 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C16329B3F26F00C06129 /* CartView.swift */; };
 		56A7C16629B3F29700C06129 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A7C16529B3F29700C06129 /* ProfileView.swift */; };
+		56AA60C129BCCB34008675B5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA60C029BCCB34008675B5 /* ImagePicker.swift */; };
+		56AA60C329BCCD27008675B5 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA60C229BCCD27008675B5 /* AddProductView.swift */; };
+		56AA60C529BCD35F008675B5 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AA60C429BCD35F008675B5 /* StorageService.swift */; };
+		56E43F2229BCAD36000EEF91 /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E43F2129BCAD36000EEF91 /* AdminView.swift */; };
+		56E43F2529BCAEB3000EEF91 /* AdminViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E43F2429BCAEB3000EEF91 /* AdminViewModel.swift */; };
+		56E43F2729BCB04E000EEF91 /* AdminOrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E43F2629BCB04E000EEF91 /* AdminOrderView.swift */; };
+		56E43F2929BCB068000EEF91 /* AdminOrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E43F2829BCB068000EEF91 /* AdminOrderViewModel.swift */; };
 		56E9483D29BA384800F9435D /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 56E9483C29BA384800F9435D /* FirebaseAuth */; };
 		56E9483F29BA384800F9435D /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 56E9483E29BA384800F9435D /* FirebaseFirestore */; };
 		56E9484129BA384800F9435D /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 56E9484029BA384800F9435D /* FirebaseStorage */; };
@@ -60,6 +67,13 @@
 		56A7C16129B3F20F00C06129 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		56A7C16329B3F26F00C06129 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		56A7C16529B3F29700C06129 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		56AA60C029BCCB34008675B5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		56AA60C229BCCD27008675B5 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
+		56AA60C429BCD35F008675B5 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		56E43F2129BCAD36000EEF91 /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		56E43F2429BCAEB3000EEF91 /* AdminViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewModel.swift; sourceTree = "<group>"; };
+		56E43F2629BCB04E000EEF91 /* AdminOrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrderView.swift; sourceTree = "<group>"; };
+		56E43F2829BCB068000EEF91 /* AdminOrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminOrderViewModel.swift; sourceTree = "<group>"; };
 		56E9484529BA3E5000F9435D /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		56E9484A29BA570100F9435D /* MainTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewModel.swift; sourceTree = "<group>"; };
 		56E9484C29BA659F00F9435D /* UserShop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserShop.swift; sourceTree = "<group>"; };
@@ -99,6 +113,7 @@
 				563FC2F529B4DCDE009C859F /* ProductCell.swift */,
 				5631A9EA29B7619600912EFE /* PositionCell.swift */,
 				5615F41F29BB88D30059EEFB /* OrderCell.swift */,
+				56AA60C029BCCB34008675B5 /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -123,6 +138,8 @@
 				563FC30029B5299B009C859F /* CartViewModel.swift */,
 				56E9484A29BA570100F9435D /* MainTabBarViewModel.swift */,
 				5615F41729BB6CE30059EEFB /* ProfileViewModel.swift */,
+				56E43F2429BCAEB3000EEF91 /* AdminViewModel.swift */,
+				56E43F2829BCB068000EEF91 /* AdminOrderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -151,6 +168,7 @@
 				563FC2FB29B4E68B009C859F /* ViewModel */,
 				563FC2F829B4E658009C859F /* Model */,
 				563FC2F229B4DB60009C859F /* Views */,
+				56E43F2329BCAD41000EEF91 /* AdminInterface */,
 				5656220129B240E000437540 /* Assets.xcassets */,
 				563FC2F729B4DCF7009C859F /* Components */,
 				5656220329B240E000437540 /* Preview Content */,
@@ -167,11 +185,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		56E43F2329BCAD41000EEF91 /* AdminInterface */ = {
+			isa = PBXGroup;
+			children = (
+				56E43F2129BCAD36000EEF91 /* AdminView.swift */,
+				56E43F2629BCB04E000EEF91 /* AdminOrderView.swift */,
+				56AA60C229BCCD27008675B5 /* AddProductView.swift */,
+			);
+			path = AdminInterface;
+			sourceTree = "<group>";
+		};
 		56E9484729BA3E5D00F9435D /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				56E9484529BA3E5000F9435D /* AuthService.swift */,
 				56E9484E29BA676300F9435D /* DatabaseService.swift */,
+				56AA60C429BCD35F008675B5 /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -258,21 +287,28 @@
 				56E9484F29BA676300F9435D /* DatabaseService.swift in Sources */,
 				5615F41829BB6CE30059EEFB /* ProfileViewModel.swift in Sources */,
 				5615F41A29BB77EF0059EEFB /* Order.swift in Sources */,
+				56AA60C129BCCB34008675B5 /* ImagePicker.swift in Sources */,
 				563FC30129B5299B009C859F /* CartViewModel.swift in Sources */,
 				56E9484B29BA570100F9435D /* MainTabBarViewModel.swift in Sources */,
 				56A7C16429B3F26F00C06129 /* CartView.swift in Sources */,
 				563FC2FD29B4ED5A009C859F /* ProductDetailView.swift in Sources */,
 				56A7C16029B3EEAA00C06129 /* MainTabBarView.swift in Sources */,
 				5656220029B240DE00437540 /* AuthView.swift in Sources */,
+				56E43F2729BCB04E000EEF91 /* AdminOrderView.swift in Sources */,
 				56A7C16229B3F20F00C06129 /* CatalogView.swift in Sources */,
 				56E9484D29BA659F00F9435D /* UserShop.swift in Sources */,
 				5631A9EB29B7619600912EFE /* PositionCell.swift in Sources */,
+				56E43F2529BCAEB3000EEF91 /* AdminViewModel.swift in Sources */,
 				5615F42029BB88D30059EEFB /* OrderCell.swift in Sources */,
+				56AA60C329BCCD27008675B5 /* AddProductView.swift in Sources */,
+				56AA60C529BCD35F008675B5 /* StorageService.swift in Sources */,
 				5615F41C29BB7BFB0059EEFB /* OrderStatus.swift in Sources */,
 				563FC2FF29B50A11009C859F /* ProductDetailViewModel.swift in Sources */,
 				563FC30529B529DC009C859F /* Position.swift in Sources */,
 				56A7C16629B3F29700C06129 /* ProfileView.swift in Sources */,
 				563FC2F629B4DCDE009C859F /* ProductCell.swift in Sources */,
+				56E43F2229BCAD36000EEF91 /* AdminView.swift in Sources */,
+				56E43F2929BCB068000EEF91 /* AdminOrderViewModel.swift in Sources */,
 				565621FE29B240DE00437540 /* xzuvyShopApp.swift in Sources */,
 				56E9484629BA3E5000F9435D /* AuthService.swift in Sources */,
 				563FC2F429B4DB79009C859F /* Product.swift in Sources */,
@@ -408,6 +444,8 @@
 				DEVELOPMENT_TEAM = VV9Y63H9BY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешите открыть папку для выбора фото";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Разрешите использовать камеру";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,6 +475,8 @@
 				DEVELOPMENT_TEAM = VV9Y63H9BY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешите открыть папку для выбора фото";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Разрешите использовать камеру";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -8,7 +8,7 @@
 import Foundation
 
 
-enum OrderStatus : String {
+enum OrderStatus : String, CaseIterable {
     
     case new = "New"
     case compiling = "Upakovka"

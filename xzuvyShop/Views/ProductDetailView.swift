@@ -9,17 +9,18 @@ import SwiftUI
 
 struct ProductDetailView: View {
     
-    var viewModel: ProductDetailViewModel
+    @State var viewModel: ProductDetailViewModel
     @State var size = "37"
     @State var count = 1
     @Environment(\.presentationMode) var presentationMode
+    
     
     
     var body: some View {
         
         VStack{
             
-            Image("airforceLow1")
+            Image(uiImage: self.viewModel.image)
                 .resizable()
                 .frame(maxWidth: 250, maxHeight: 270)
                 .cornerRadius(30)
@@ -71,6 +72,9 @@ struct ProductDetailView: View {
                                     .background(Color("blackAlpha"))
                                     .cornerRadius(15)
                                     .padding(.top, 15)
+                            }
+                            .onAppear {
+                                self.viewModel.getImage()
                             }
 
                         }

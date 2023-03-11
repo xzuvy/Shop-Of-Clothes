@@ -20,6 +20,12 @@ class AuthService {
          return auth.currentUser
     }
     
+    func signOut() {
+        
+        try! auth.signOut()
+        
+    }
+    
     func signUp(email : String,
                 password : String,
                 completion : @escaping (Result<User, Error>) -> ()) {

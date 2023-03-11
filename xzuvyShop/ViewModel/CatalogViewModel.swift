@@ -34,7 +34,7 @@ class CatalogViewModel: ObservableObject {
                 information: "NB")
     ]
     
-    var allProducts = [
+    @Published var allProducts = [
         
         Product(id: "5",
                 title: "Nike AirForce 1 Low",
@@ -56,5 +56,16 @@ class CatalogViewModel: ObservableObject {
                 imageUrl: "Not found", price: 255,
                 information: "NB")
     ]
+    
+    func getProducts() {
+        DatabaseService.shared.getProducts { result in
+            switch result {
+            case .success(let products):
+                self.allProducts = products
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
 }

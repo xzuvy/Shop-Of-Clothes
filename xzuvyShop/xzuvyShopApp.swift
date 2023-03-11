@@ -19,7 +19,16 @@ struct xzuvyShopApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            if var user = AuthService.shared.currentUser {
+                if user.uid == "16pUa7971Ff3qPUCWWvgbnIoPyG2" {
+                    AdminView()
+                } else {
+                    let viewModel = MainTabBarViewModel(user: user)
+                    MainTabBarView(viewModel: viewModel)
+                }
+            } else {
+                AuthView()
+            }
         }
     }
     
